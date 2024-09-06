@@ -1,0 +1,39 @@
+.about-button ul {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: space-around;
+    margin-left: 65%;
+    list-style-type: none;
+    width: 25%;
+
+}
+
+.about-button a {
+    position: absolute;
+    bottom: 90%;
+    color: aquamarine;
+    background-color: cadetblue;
+    padding: 8px;
+    border-radius: 10px;
+    align-self: flex-start;
+}
+
+#about-me {
+    height: 100%; /* Skal det være vh eller %?     Full screen height */
+    padding: 10px;
+    background-color: cornsilk;
+    /* display: flex; */
+    /* flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    text-align: left;
+    color: black;
+}
+
+.empty-space {
+    margin-top: 70%;
+}
+
+.about-button a:hover {
+    font-size: 18px;
+}
