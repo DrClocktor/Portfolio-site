@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:object-fit="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -36,8 +36,8 @@
 </style>
 
 <body>
-<header>
-    <nav class="about-button">
+<header class="navbar">
+    <nav>
         <ul>
             <li>
                 <a href="#about-me">Om Mig</a> <!-- Her laver den et link som scroller ned -->
@@ -50,8 +50,8 @@
             </li>
         </ul>
     </nav>
-
 </header>
+
 
 <main>
     <h1>Jonas Portfolio</h1>
@@ -61,38 +61,51 @@
 
 </section>
 
-<section id="about-me">
+<!-- About me sektionen -->
+<section class="about-me" id="about-me">
     <style>
-        body {
+        .about-me {
             background-color: cornsilk;
+            height: 74vh;
+            padding: 35px;
         }
-
     </style>
 
-    <div class="pic-of-me"><img src="20240711_134011.jpg" alt="???" width="200" height="150"></div>
-    <header><h2>Om mig</h2></header>
-    <article>
-        <h3>Uddannelser</h3>
+    <div class="pic-of-me"> <img src="20240711_134011.jpg" alt="Billede af mig"> </div>
+
+
+
+    <!-- Om mig liste -->
+    <div class="about-list">
+        <h2>Om mig</h2>
         <ul>
+            <li> <h3>Uddannelser</h3> </li>
             <li>HF 2021-2024</li>
-            <li></li>
-            <li></li>
+            <li>KEA IT-Arkitektur 2024- Igangværende</li>
         </ul>
-        <h3>Tidligere Erfaringer</h3>
+
         <ul>
+            <li> <h3>Tidligere Erfaringer</h3> </li>
             <li>Novo Nordisk | Datatekniker-elev</li>
+            <li> Det Kongelige Teater | IT-Medhjælper</li>
         </ul>
-        <h3>Andet</h3>
+
+        <ul>
+            <li> <h3>Andet</h3> </li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <h3>Kontakt information</h3>
+    <ul>
         <li>
 
         </li>
-    </article>
-</section>
-
-<footer>
-    <h3>Kontakt information</h3>
+    </ul>
 </footer>
-
 </body>
 </html>
 
