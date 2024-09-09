@@ -1,0 +1,102 @@
+/* Navigations bar sektion */
+
+.navbar {
+    background-color: rgba(5,100,100, .50);
+    top: 0;
+    position: sticky;
+    overflow: hidden;
+}
+
+.navbar ul {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: space-around;
+    margin-left: 68%;
+    list-style-type: none;
+}
+
+.navbar a {
+    /* width: 28%; */
+    /* bottom: 50%;  Hvad skulle det her gøre?*/
+    color: aquamarine;
+    background-color: cadetblue;
+    padding: 8px;
+    border-radius: 20px;
+    text-decoration: none;
+   /* align-self: flex-start; */
+}
+
+.navbar a:hover {
+    font-size: 18px;
+}
+
+.my-name
+
+/* About me sektionen */
+.pic-of-me {
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+.pic-of-me img {
+    position: relative;
+    top: -15px;
+    left: -20px;
+    height: 50%;
+    width: auto;
+    object-fit: contain;
+}
+
+ .about-me {
+     display: flex;
+}
+
+
+/*
+.about-list{
+    top: 10%;
+}
+*/
+
+
+.about-list {
+    display: flex;
+    align-items: flex-start;
+    color: forestgreen;
+}
+
+.about-list h2 {
+    /* Flyt den lidt op? */
+}
+
+.about-list ul{
+    list-style-type: none;
+
+}
+
+
+.about-list h3 {
+    /*position: relative; */
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*top: 15%; */
+    /*left: 5%;*/
+    color: dodgerblue;
+}
+
+.about-list li {
+    /*position: absolute;
+    display: flex;
+    flex-direction: column; */
+}
+
+.empty-space {
+    min-height: 100vh;
+}
+
+/* Footer sektionen */
+footer {
+    padding: 1%;
+    background-color: cornsilk;
+}
