@@ -1,10 +1,11 @@
 /* Navigations bar sektion */
 
-.navbar {
-    background-color: rgba(5,100,100, .50);
+.navbar { /* 5, 100, 100 Tidligere farve */
+    background-color: rgba(169, 212, 255, 50);
     top: 0;
     position: sticky;
     overflow: hidden;
+    transition: top 0.3s;
 }
 
 .navbar ul {
@@ -12,25 +13,128 @@
     /* flex-direction: row-reverse; */
     justify-content: space-around;
     margin-left: 68%;
+    margin-top: 2%;
     list-style-type: none;
 }
 
-.navbar a {
-    /* width: 28%; */
-    /* bottom: 50%;  Hvad skulle det her gøre?*/
-    color: aquamarine;
-    background-color: cadetblue;
-    padding: 8px;
-    border-radius: 20px;
-    text-decoration: none;
-   /* align-self: flex-start; */
-}
-
+/* gammel kode*/
+/* .navbar a {
+color: aquamarine;
+background-color: cadetblue;
+padding: 10px;
+border-radius: 20px;
+text-decoration: none;
+} */
+/*
 .navbar a:hover {
     font-size: 18px;
 }
+*/
 
-.my-name
+
+/* Body Sektionen */
+html, body {
+    /*margin: 0;
+    padding: 0;
+    height: 100%; */
+    overflow-x: hidden;
+    overscroll-behavior: none;
+
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('a22adf5f-3d6c-488c-b166-f1b8e4b701f7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(15px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 125%;
+    background: rgba(194, 225, 255, 0.75);
+    z-index: -1;
+    pointer-events: none; /* Ensure the overlay doesn't block clicks (Taget fra ChatGPT)*/
+}
+
+/*body * {  Content inside body
+    position: relative;
+    z-index: 2;
+}
+ */
+
+.my-name {
+    display: flex;
+}
+
+.my-name div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 23vw;
+    margin-top: 15vh;
+    width: 46vw;
+    height: 15vh;
+    background-color: rgba(54, 57, 90, 0.15);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Main sektionen */
+.my-name h1 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin-top: -0.5vh;
+    font-family: "Red hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    color: azure;
+
+}
+
+.my-name p {
+    position: absolute;
+    display: inline-block;
+    margin-top: 9vh;
+    font-family: "Red hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: azure;
+}
 
 /* About me sektionen */
 .pic-of-me {
@@ -41,54 +145,54 @@
 
 .pic-of-me img {
     position: relative;
-    top: -15px;
-    left: -20px;
-    height: 50%;
+    top: 25px;
+    left: -25px;
     width: auto;
+    height: 50%;
     object-fit: contain;
 }
 
- .about-me {
-     display: flex;
+.about-me {
+    display: flex;
 }
 
-
-/*
-.about-list{
-    top: 10%;
+.about-me {
+    background: rgb(194, 225, 255);
+    height: 74vh;
+    padding: 35px;
 }
-*/
 
 
 .about-list {
     display: flex;
     align-items: flex-start;
-    color: forestgreen;
+    background-color: rgba(54, 57, 90, 0.15);
+    padding: 10px;
+    border-radius: 15px;
+    color: azure;
+    height: 25vh;
+    width: 100vw;
+    margin-top: 8vh;
 }
 
 .about-list h2 {
+    position: relative;
+    bottom: 2vh;
+    margin-left: 5vh;
+    width: 30vw;
+    font-size: 30px;
+    font-optical-sizing: auto;
     /* Flyt den lidt op? */
 }
 
-.about-list ul{
+.about-list ul {
+    margin-top: 7vh;
+    position: relative;
+    right: 28vw;
+    bottom: 2vh;
     list-style-type: none;
-
-}
-
-
-.about-list h3 {
-    /*position: relative; */
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*top: 15%; */
-    /*left: 5%;*/
-    color: dodgerblue;
-}
-
-.about-list li {
-    /*position: absolute;
-    display: flex;
-    flex-direction: column; */
+    width: 25vw;
+    font-optical-sizing: auto;
 }
 
 .empty-space {
@@ -98,5 +202,52 @@
 /* Footer sektionen */
 footer {
     padding: 1%;
-    background-color: cornsilk;
+    background: rgb(194, 225, 255);
+}
+
+
+/* Button */
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
 }

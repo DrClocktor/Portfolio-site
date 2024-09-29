@@ -1,0 +1,33 @@
+.container-sem {
+    display: grid;
+    grid-template-columns: repeat(5, 25vh);
+    grid-template-rows: repeat(5, 25vh);
+    justify-content: space-between;
+    background-color: mintcream;
+    grid-gap: 10vh;
+    width: 100%;
+    height: 100%;
+}
+
+.opgaver-et {
+    background-color: forestgreen;
+    border: tomato;
+    padding: 10vh;
+    grid-column: auto;
+    justify-content: space-between;
+}
+
+
+.opgaver-to {
+    background-color: tomato;
+    padding: 10vh;
+    grid-column: auto;
+
+}
+
+.opgaver-tre {
+    background-color: crimson;
+    padding: 10vh;
+    grid-column: auto;
+    justify-content: space-between;
+}
