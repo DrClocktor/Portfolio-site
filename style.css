@@ -1,21 +1,29 @@
 /* Navigations bar sektion */
 
 .navbar { /* 5, 100, 100 Tidligere farve */
-    background-color: rgba(169, 212, 255, 50);
+    background-color: rgba(195, 217, 239, 0.9); /*169, 212, 255, 50*/
     top: 0;
     position: sticky;
     overflow: hidden;
     transition: top 0.3s;
+    z-index: 3;
 }
+
+.navbar nav {
+    display: flex;
+
+}
+
 
 .navbar ul {
     display: flex;
-    /* flex-direction: row-reverse; */
-    justify-content: space-around;
-    margin-left: 68%;
-    margin-top: 2%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 4vw;
+    gap: 4vw;
     list-style-type: none;
 }
+
 
 /* gammel kode*/
 /* .navbar a {
@@ -81,16 +89,22 @@ body::after {
     left: 0;
     height: 150%;
     width: 125%;
-    background: rgba(194, 225, 255, 0.75);
+    background-color: rgba(194, 225, 255, 0.75);
     z-index: -1;
     pointer-events: none; /* Ensure the overlay doesn't block clicks (Taget fra ChatGPT)*/
 }
 
-/*body * {  Content inside body
-    position: relative;
-    z-index: 2;
+body.dark-mode::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 125%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+    pointer-events: none; /* Ensure the overlay doesn't block clicks (Taget fra ChatGPT)*/
 }
- */
 
 .my-name {
     display: flex;
@@ -107,6 +121,7 @@ body::after {
     background-color: rgba(54, 57, 90, 0.15);
     padding: 10px;
     border-radius: 15px;
+    z-index: 1;
 }
 
 /* Main sektionen */
@@ -121,7 +136,6 @@ body::after {
     font-style: normal;
     font-size: 48px;
     color: azure;
-
 }
 
 .my-name p {
@@ -157,11 +171,10 @@ body::after {
 }
 
 .about-me {
-    background: rgb(194, 225, 255);
+    background-color: rgb(194, 225, 255);
     height: 74vh;
     padding: 35px;
 }
-
 
 .about-list {
     display: flex;
@@ -202,7 +215,7 @@ body::after {
 /* Footer sektionen */
 footer {
     padding: 1%;
-    background: rgb(194, 225, 255);
+    background-color: rgb(194, 225, 255);
 }
 
 
@@ -251,3 +264,148 @@ footer {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
+
+
+/* Dark Mode button from web */
+html {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*  padding-top: 1em; */
+}
+
+/* Switch starts here */
+.rocker {
+    display: inline-block;
+    position: relative;
+    /*
+    SIZE OF SWITCH
+    ==============
+    All sizes are in em - therefore
+    changing the font-size here
+    will change the size of the switch.
+    See .rocker-small below as example.
+    */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #888;
+    width: 7em;
+    height: 4em;
+    overflow: hidden;
+    border-bottom: 0.5em solid rgba(238, 238, 238, 0);
+}
+
+.rocker-small {
+    font-size: 0.75em; /* Sizes the switch */
+    margin: 1em;
+}
+
+.rocker::before {
+    content: "";
+    position: absolute;
+    top: 2.5em;
+    left: 0.5em;
+    right: 0.5em;
+    bottom: 0;
+    background-color: #999;
+    border: 0.5em solid #eee;
+    /* border-bottom: 0; */
+}
+
+.rocker input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-left,
+.switch-right {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 3em;
+    transition: 0.2s;
+}
+
+.switch-left {
+    height: 2.4em;
+    width: 2.75em;
+    left: 0.85em;
+    bottom: 0.4em;
+    background-color: #ddd;
+    transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+    right: 0.5em;
+    bottom: 0;
+    background-color: #bd5757;
+    color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 2.45em;
+    bottom: -0.45em;
+    background-color: #ccc;
+    transform: skewY(-65deg);
+}
+
+.switch-left::before {
+    left: -0.4em;
+}
+
+.switch-right::before {
+    right: -0.375em;
+    background-color: transparent;
+    transform: skewY(65deg);
+}
+
+input:checked + .switch-left {
+    background-color: #0084d0;
+    color: #fff;
+    bottom: 0px;
+    left: 0.5em;
+    height: 2.5em;
+    width: 3em;
+    transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked + .switch-left::before {
+    background-color: transparent;
+    width: 3.0833em;
+}
+
+input:checked + .switch-left + .switch-right {
+    background-color: #ddd;
+    color: #888;
+    bottom: 0.4em;
+    right: 0.8em;
+    height: 2.4em;
+    width: 2.75em;
+    transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+    background-color: #ccc;
+}
+
+
